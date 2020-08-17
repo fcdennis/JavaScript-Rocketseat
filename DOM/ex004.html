@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Exercício 004</title>
+</head>
+
+<body>
+    <h1>Exercício 004 DOM</h1>
+
+    <h2>Gera uma lista dinâmica a partir de um vetor e adiciona valores a partir de um input de html</h2>
+
+    <div id="input">
+        <input id="nome" type="text" name="nome">
+        <button onClick="adicionarNovoNome()">Adicionar</button>
+        <p><button onClick="render()">Finalizar</button> </p>
+    </div>
+
+    <div id="output">
+    </div>
+
+</body>
+
+<script>
+    const nome = []
+
+    function adicionarNovoNome() {
+        let seleção = document.querySelector('input#nome')
+        let novoNome = seleção.value
+        nome.push(novoNome)
+        seleção.value = ""
+    }
+
+    function criarLi(txt, parent){
+        let novaLi = document.createElement('li')
+        novaLi.innerText = txt
+        novaLi.style.color = '#00'
+        novaLi.style.fontSize = '16pt'
+        parent.appendChild(novaLi)
+    }
+
+    function render(){
+        let output = document.querySelector('div#output')
+        let novaUl = document.createElement('ul')
+        output.appendChild(novaUl)
+        for (let i = 0; i < nome.length; i++){
+            criarLi(nome[i], novaUl)
+        }
+    }
+
+    function estilo(){
+        let estilo = document.body
+        estilo.style.backgroundColor = '#0F0'
+        estilo.style.height = "500px"
+        estilo.style.display = 'grid'
+        estilo.style.placeItems = 'center'
+    }
+    
+    window.addEventListener("load", estilo)
+
+</script>
+
+</html>

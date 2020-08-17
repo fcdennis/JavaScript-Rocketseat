@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 004</title>
+</head>
+
+<body>
+    <h1>Exercício 004 Introdução</h1>
+    <h2>Descubra o nível de experiência</h2>
+    <div id="input">
+        <input type="number" name="anos" id="anos">
+        <button onclick="retorno()">Descubra seu nível</button>
+
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        function experiencia(anos) {
+            if (anos <=1){
+                return 'Iniciante'
+            } else if (anos <=3){
+                return 'Intermediário'
+            } else if (anos <= 6) {
+                return 'Avançado'
+            } else{
+                return 'Mestre Jedi'
+            }
+        }
+        function retorno(){
+            var anosEstudo = Number(document.querySelector('input#anos').value)
+            let resp = document.querySelector('div#output')
+            resp.innerHTML = `${experiencia(anosEstudo)}`
+            resp.style.fontSize = '16pt'
+            resp.style.color = '#F00'
+            resp.style.fontFamily = 'MonoSpace'
+            console.log(experiencia(anosEstudo))
+        }
+    </script>
+
+</body>
+
+</html>

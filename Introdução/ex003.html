@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 003</title>
+</head>
+<body>
+    <h1>Exercício 003 - Introdução</h1>
+    <h2>'JavaScript' retorna true, outras palavras retornam false</h2>
+    <div id="input">
+        <input type="text" name="hab" id="hab">
+        <input type="button" value="Verificar" onclick="adicionar()">
+
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        function temHabilidade(skills){
+            if (skills.indexOf('JavaScript') == 0){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        function adicionar(){
+            let habilidades = []
+            let txt = document.querySelector('input#hab')
+            let resp = document.querySelector('div#output')
+            habilidades.push(txt.value)
+            resp.innerHTML = `${temHabilidade(habilidades)}`
+        }  
+    </script>
+</body>
+</html>

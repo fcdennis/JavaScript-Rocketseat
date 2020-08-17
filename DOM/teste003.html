@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 003</title>
+</head>
+<body>
+    <h1>Teste 003 DOM</h1>
+    <div id="app">
+        <input id="nome">
+       
+    </div>
+    <script>
+        var linkElement = document.createElement('a')
+        linkElement.setAttribute('href', 'http://www.uol.com.br')
+        linkElement.setAttribute('title', 'LINK para o site do UOL')
+        var textElement = document.createTextNode('Acessar o UOL')
+        linkElement.appendChild(textElement)
+        var conteinerElement = document.querySelector('#app')
+        conteinerElement.appendChild(linkElement)
+        var inputElement = document.querySelector('input#nome')
+        conteinerElement.removeChild(inputElement)
+        linkElement.style.color = '#F00'
+    </script>
+    
+</body>
+</html>

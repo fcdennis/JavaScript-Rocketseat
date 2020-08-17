@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 001</title>
+</head>
+<body>
+    <h1>Exercício 001 DOM</h1>
+    <h2>Ao clica no botão cria um quadrado vermelho</h2>
+    <div id="input">
+        <input type="button" value="Criar" onclick="criar()">
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        function criar() {
+            let $ = document.querySelector.bind(document) // Uma forma de simplificar o querySelector
+            let output = $('div#output')
+            let quadrado = document.createElement('div')
+            quadrado.style.width = '100px'
+            quadrado.style.height = '100px'
+            quadrado.style.border = '1px solid #000'
+            quadrado.style.background = '#F00'
+            quadrado.style.margin = '1px'
+            output.appendChild(quadrado)
+        }
+    </script>
+</body>
+</html>

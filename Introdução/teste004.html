@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 004</title>
+</head>
+
+<body>
+    <h1>Teste 3</h1>
+    <h2>Use o console Log</h2>
+
+    <script>
+        function retornaSexo(sexo) {
+            // M, F
+            // Masculino, Feminino
+            /*
+            if (sexo === 'F') {
+                return 'Feminino'
+            }
+            else if (sexo === 'M') {
+                return 'Masculino'
+            }
+            else {
+                return 'Outro'
+            }
+            */
+            switch (sexo) {
+                case 'F':
+                    return 'Feminino'
+                    break
+                case 'M':
+                    return 'Masculino'
+                    break
+                default:
+                    return 'Outro'
+            }
+        }
+
+        var resultado = retornaSexo('F')
+        console.log(resultado)
+    </script>
+</body>
+
+</html>

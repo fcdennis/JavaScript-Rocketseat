@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 008</title>
+</head>
+<body>
+    <h1>Teste 008</h1>
+    <h2>Ver o console Log</h2>
+    <script>
+        function exibeAlgo() {
+            console.log('Hello World')
+        }
+        //Define um intervalo para executar uma ação
+        //Quando chamar uma função dentro de um setInterval, não usar os parentesis, porque ai passa os paramentros como referencia e não por valor.
+        //1000 = 1 segundo
+        setInterval(exibeAlgo, 3000)
+    </script>
+</body>
+</html>

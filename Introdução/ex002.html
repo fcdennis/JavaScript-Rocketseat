@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 002</title>
+</head>
+
+<body>
+    <h1>Ver sequência de números pares de um intervalo</h1>
+    <div id="input">
+        <p>Número 1: <input type="number" id="n1"></p>
+        <p>Número 2: <input type="number" id="n2"></p>
+        <button id="clique" onclick="par()">Ver sequência</button>
+    </div>
+    <div id="output">
+        
+    </div>
+    <script>
+        function par() {
+            let n1 = Number(document.querySelector('#n1').value)
+            let n2 = Number(document.querySelector('#n2').value)
+            let output = document.querySelector('#output')
+            var pares = []
+            for (let i = n1; i <= n2; i++){
+                if(i % 2 == 0){
+                    pares.push(i)
+                }
+            }
+            output.innerHTML = `Os números pares entre ${n1} e ${n2} são: `
+            for (let j = 0; j < pares.length; j++){
+                output.innerHTML += `${pares[j]} --> `
+            }
+            output.innerHTML += 'FIM'
+        }
+
+    </script>
+</body>
+
+</html>
